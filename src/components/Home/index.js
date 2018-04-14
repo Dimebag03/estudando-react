@@ -1,12 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Layout } from 'antd';
+import CustomFooter from '../CustomFooter';
+import CustomHeader from '../CustomHeader';
+import SideBar from '../SideBar';
+import Content from './Content.js';
 
 function Home() {
     return (
-        <div>
-            <Link to='/login'>Logout</Link>
-            <h1>Home</h1>
-        </div>
+        <Layout style={{ minHeight: '100vh' }}>
+            <CustomHeader />
+            <Layout>
+                <SideBar />
+                <Content />
+            </Layout>
+            <CustomFooter />
+        </Layout>
     );
 }
 
